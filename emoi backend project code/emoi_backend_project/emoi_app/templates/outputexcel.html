@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>மொய் பில்</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .right-align {
+            text-align: right;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f2f2f2; /* Optional: highlight total row */
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>வரிசை எண்</th>
+                <th>பெயர்</th>
+                <th>முகவரி</th>
+                <th>தொகை</th>
+                <th>பணம் செலுத்திய தேதி மற்றும் நேரம்</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.Moi_user_Name }}</td>
+                <td>{{ item.Moi_user_address }}</td>
+                <td>{{ item.Moi_user_amount }}</td>
+                <td>{{ item.Moidetails_Datetime }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total-row">
+                <td colspan="3" class="right-align">Total:</td>
+                <td class="right-align">{{ total }}</td>
+                <td></td> <!-- Empty cell for alignment -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

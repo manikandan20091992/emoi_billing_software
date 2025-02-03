@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>மொய் பில்</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .bill-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bill-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .bill-details {
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .bill-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .bill-details th, .bill-details td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .bill-details th {
+            background-color: #f2f2f2;
+        }
+        .right-align {
+            text-align: right;
+        }
+        .small-text {
+            font-size: 12px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bill-header">
+            <h1>மொய் பில்</h1>
+        </div>
+        
+        <div class="card bill-details">
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>தகவல்</th>
+                            <th>விவரங்கள்</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>மண மகன் பெயர்</td>
+                            <td>{{ data.ManaMaganName }}</td>
+                        </tr>
+                        <tr>
+                            <td>மண மகள் பெயர்</td>
+                            <td>{{ data.ManaMagalName }}</td>
+                        </tr>
+                        <tr>
+                            <td>திருமண தேதி</td>
+                            <td>{{ data.FucntionDate }}</td>
+                        </tr>
+                        <tr>
+                            <td>திருமண இடம்</td>
+                            <td>{{ data.FucntionLocationAddress }}</td>
+                        </tr>
+                        <tr>
+                            <td>மொய் செலுத்துபவர் பெயர்</td>
+                            <td>{{ data.Moi_user_Name }}</td>
+                        </tr>
+                        <tr>
+                            <td>மொய் செலுத்துபவர் முகவரி</td>
+                            <td>{{ data.Moi_user_address }}</td>
+                        </tr>
+                        <tr>
+                            <td>மொய் செலுத்துபவர் தொழில்</td>
+                            <td>{{ data.Moi_user_occupation }}</td>
+                        </tr>
+                        <tr>
+                            <td>மொய் செலுத்துபவர் தொகை</td>
+                            <td>{{ data.Moi_user_amount }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="right-align small-text">
+                    <strong>பில்லிங் முகவர் பெயர்:</strong> {{ data.billingAgentName }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>தங்கள் வருகைக்கு நன்றி!</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
