@@ -1,0 +1,6 @@
+Django
+djangorestframework
+pytz
+reportlab
+pandas
+weasyprint
