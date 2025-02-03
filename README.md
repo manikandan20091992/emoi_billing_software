@@ -11,10 +11,9 @@ convenience and accessibility.
 
 To install this project, follow these steps:
 
-```bash
-
+git clone https://github.com/manikandan20091992/emoi_billing_software.git
 cd MyProject
-pip install -r requirements.txt  # If using Python
+pip install -r requirement.txt  # If using Python
 Django
 djangorestframework
 pytz
